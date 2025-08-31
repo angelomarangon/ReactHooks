@@ -1,3 +1,4 @@
+import { generarUUID } from '@/utils/generarID';
 import * as z from 'zod/v4';
 
 interface Todo {
@@ -18,9 +19,7 @@ export type TaskAction =
     | { type: 'TOGGLE_TODO', payload: string } // id
     | { type: 'DELETE_TODO', payload: string } // id
 
-function generarUUID(): string {
-    return crypto.randomUUID();
-}
+
 
 const TodoSchema = z.object({
     id: z.string(),

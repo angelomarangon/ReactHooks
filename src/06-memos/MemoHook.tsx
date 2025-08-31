@@ -14,11 +14,11 @@ export const MemoHook = () => {
     }, [subtitle])
 
     return (
-        <div className="min-h-screen p-6 flex flex-col gap-4
-                    bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="bg-gradient flex flex-col gap-4">
             <h1 className="text-2xl font-thin text-white">MemoApp</h1>
 
             <MyTitle title={title} />
+
             <MySubTitle subTitle={subtitle} callMyAPI={handleMyAPICall} />
 
             <button
@@ -27,7 +27,7 @@ export const MemoHook = () => {
             >Cambiar titulo</button>
             <button
                 className="bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer"
-                onClick={() => setSubtitle(`World`)}
+                onClick={() => setSubtitle(`World, ${new Date().getTime()}`)}
             >Cambiar subitulo</button>
 
         </div>

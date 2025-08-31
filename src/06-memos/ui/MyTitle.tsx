@@ -1,8 +1,9 @@
 import { memo } from "react";
 
 interface Props {
-    title: string;
+  title: string;
 }
-export const MyTitle = memo(({title}:Props) => {
+export const MyTitle = memo(({ title }: Props) => {
+  console.log('MyTitle re-render');
   return <h1 className="text-white text-3xl">{title}</h1>
-})
+});
